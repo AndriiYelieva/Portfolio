@@ -1,0 +1,162 @@
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 16px;
+  width: 1050px;
+}
+
+.project {
+  position: relative;
+  height: 300px;
+  width: 515px;
+  padding: 20px 20px 0 20px;
+  box-sizing: border-box;
+
+  &__apple {
+    margin: 0 20px 20px 0;
+    border-radius: 20px;
+    background-color: #FCDBC1;
+
+    background-position: center right;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    background-image: url(../../img/projects/phone.png);
+
+    &--wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &--name {
+      margin: 0;
+      color: #313237;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 100%;
+    }
+
+    &--about {
+      position: absolute;
+      bottom: 0;
+      width: 300px;
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+
+  &__2048 {
+    position: relative;
+    border-radius: 20px;
+    background-color: #f2b179;
+    background-position: 130%;
+    background-repeat: no-repeat;
+    background-image: url(../../img/blocks.png);
+
+    &--wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &--name {
+      margin: 0;
+      color: #776e65;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 100%;
+    }
+
+    &--about {
+      position: absolute;
+      bottom: 0;
+      width: 300px;
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+
+  &__museum {
+    position: relative;
+    margin: 0 20px 20px 0;
+    border-radius: 20px;
+    background-color: #3f5252;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    background-image: url(../../img/projects/grilHeader.webp);
+
+    &--wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &--name {
+      margin: 0;
+      color: #cd4d31;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 100%;
+    }
+
+    &--about {
+      position: absolute;
+      bottom: 0;
+      width: 300px;
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+
+  &__bike {
+    position: relative;
+    border-radius: 20px;
+    background-color: #1d1d1d;
+    background-image: url(../../img/projects/bike3.png);
+    background-position: 180%;
+    background-repeat: no-repeat;
+    object-fit: contain;
+
+    &--wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &--name {
+      margin: 0;
+      color: #fff;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 100%;
+    }
+
+    &--about {
+      position: absolute;
+      bottom: 0;
+      color: #fff;
+      width: 300px;
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+
+  &__demo {
+    height: 30px;
+    width: 30px;
+
+    &--link {
+      height: 30px;
+      width: 30px;
+
+      background-image: url('../../img/projects/defaultLink.svg');
+      transition: background-image 0.4s;
+
+      &:hover {
+        background-image: url('../../img/projects/linkActive.svg');
+      }
+    }
+  }
+}

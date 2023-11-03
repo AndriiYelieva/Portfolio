@@ -1,3 +1,42 @@
-.starter {
-  font-size: 18px;
+.main {
+  margin: 80px 220px;
+  height: 100%;
+  border-radius: 50% 20% / 10% 40%;
+  border-radius: 20px;
+  background: #fff;
+}
+
+body {
+  background-color: #D4D4D4;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    margin: 16px;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+
+    margin-right: 16px;
+
+    &--name {
+      color: #313030;
+      font-weight: bold;
+    }
+
+    &--circle {
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      background-color: #CCCCFF;
+    }
+  }
 }
