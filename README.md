@@ -1,9 +1,3 @@
-# React TypeScript Starter Pack
+# Hello, world :D
 
-To use this template click `Use this template`
-
-### Available Scripts
-
-`Deploy` - available to deploy your application to gh-pages
-
-`SCSS Preprocessor` - available to write your styles with modern style language
+you can open this portfolio - 'https://andriiyelieva.github.io/Portfolio/'
