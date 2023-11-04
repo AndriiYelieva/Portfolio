@@ -1,7 +1,11 @@
+@import "/src/style/main.scss";
+
 .main {
-  margin: 80px 220px;
-  height: 100%;
-  border-radius: 50% 20% / 10% 40%;
+  margin: 8px 16px;
+
+  @include onDesktop {
+    margin: 80px 220px;
+  }
   border-radius: 20px;
   background: #fff;
 }

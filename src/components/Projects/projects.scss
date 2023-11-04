@@ -1,19 +1,33 @@
+@import "/src/style/main.scss";
+
 .projects {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 16px;
-  width: 1050px;
+  display: block;
+
+  @include onTablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .project {
-  position: relative;
   height: 300px;
-  width: 515px;
-  padding: 20px 20px 0 20px;
-  box-sizing: border-box;
+  min-width: 270px;
+  margin: 8px;
+
+  @include onTablet {
+    margin: 0;
+    position: relative;
+    height: 300px;
+    padding: 20px 20px 0 20px;
+    box-sizing: border-box;
+  }
+
+  @include onDesktop {
+    width: 500px;
+  }
 
   &__apple {
-    margin: 0 20px 20px 0;
+    flex: 1;
     border-radius: 20px;
     background-color: #FCDBC1;
 
@@ -22,10 +36,25 @@
     object-fit: contain;
     background-image: url(../../img/projects/phone.png);
 
+    @include onTablet {
+      margin: 8px;
+      min-width: 350px;
+    }
+
+    @include onDesktop {
+      margin: 16px;
+      min-width: 400px;
+    }
+
     &--wrapper {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin: 8px;
+
+      @include onDesktop {
+        margin: 0;
+      }
     }
 
     &--name {
@@ -35,51 +64,88 @@
       font-weight: 700;
       font-size: 48px;
       line-height: 100%;
+      margin: 8px;
+
+      @include onTablet {
+        margin: 0;
+      }
     }
 
     &--about {
-      position: absolute;
-      bottom: 0;
-      width: 300px;
-      font-weight: 500;
-      font-size: 16px;
+      display: none;
+
+      @include onDesktop {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 300px;
+        font-weight: 500;
+        font-size: 16px;
+      }
     }
   }
 
   &__2048 {
+    flex: 1;
     position: relative;
     border-radius: 20px;
     background-color: #f2b179;
-    background-position: 130%;
+    background-position: center right;
     background-repeat: no-repeat;
-    background-image: url(../../img/blocks.png);
+    background-image: url(../../img/projects/blocks.png);
+
+
+    @include onTablet {
+      margin: 8px 8px 8px 0;
+      min-width: 350px;
+    }
+
+    @include onDesktop {
+      margin: 16px 16px 16px 0;
+      min-width: 400px;
+    }
 
     &--wrapper {
       display: flex;
+      align-items: center;
       justify-content: space-between;
+      margin: 8px;
+
+      @include onDesktop {
+        margin: 0;
+      }
     }
 
     &--name {
       margin: 0;
-      color: #776e65;
+      color: #000;
       font-style: normal;
       font-weight: 700;
       font-size: 48px;
       line-height: 100%;
+      margin: 8px;
+
+      @include onTablet {
+        margin: 0;
+      }
     }
 
     &--about {
-      position: absolute;
-      bottom: 0;
-      width: 300px;
-      font-weight: 500;
-      font-size: 16px;
+      display: none;
+
+      @include onDesktop {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 300px;
+        font-weight: 500;
+        font-size: 16px;
+      }
     }
   }
 
   &__museum {
-    position: relative;
-    margin: 0 20px 20px 0;
+    flex: 1;
     border-radius: 20px;
     background-color: #3f5252;
     background-position: bottom right;
@@ -87,9 +153,25 @@
     object-fit: contain;
     background-image: url(../../img/projects/grilHeader.webp);
 
+    @include onTablet {
+      position: relative;
+      margin: 8px;
+      min-width: 350px;
+    }
+
+    @include onDesktop {
+      margin: 0 16px 16px 16px;
+      min-width: 400px;
+    }
+
     &--wrapper {
       display: flex;
       justify-content: space-between;
+      margin: 8px;
+
+      @include onDesktop {
+        margin: 0;
+      }
     }
 
     &--name {
@@ -99,47 +181,91 @@
       font-weight: 700;
       font-size: 48px;
       line-height: 100%;
+
+      margin: 8px;
+
+      @include onTablet {
+        margin: 0;
+        width: 300px;
+      }
+
+      @include onDesktop {
+        width: auto;
+      }
     }
 
     &--about {
-      position: absolute;
-      bottom: 0;
-      width: 300px;
-      font-weight: 500;
-      font-size: 16px;
+      display: none;
+
+      @include onDesktop {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 400px;
+        font-weight: 500;
+        font-size: 16px;
+      }
     }
   }
 
   &__bike {
+    flex: 1;
     position: relative;
     border-radius: 20px;
     background-color: #1d1d1d;
     background-image: url(../../img/projects/bike3.png);
-    background-position: 180%;
+    background-position: center right;
     background-repeat: no-repeat;
     object-fit: contain;
+
+    @include onTablet {
+      background-position: 180%;
+      margin: 8px 8px 8px 0;
+      min-width: 350px;
+    }
+
+    @include onDesktop {
+      margin: 0 16px 16px 0;
+      min-width: 400px;
+    }
 
     &--wrapper {
       display: flex;
       justify-content: space-between;
+      align-items: center;
+      margin: 8px;
+
+      @include onDesktop {
+        margin: 0;
+      }
     }
 
     &--name {
-      margin: 0;
       color: #fff;
       font-style: normal;
       font-weight: 700;
       font-size: 48px;
       line-height: 100%;
+
+      margin: 8px;
+
+      @include onTablet {
+        margin: 0;
+      }
     }
 
     &--about {
-      position: absolute;
-      bottom: 0;
+      display: none;
       color: #fff;
-      width: 300px;
-      font-weight: 500;
-      font-size: 16px;
+
+      @include onDesktop {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 300px;
+        font-weight: 500;
+        font-size: 16px;
+      }
     }
   }
 
